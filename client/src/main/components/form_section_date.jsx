@@ -2,15 +2,15 @@ import React from "react";
 
 function FormSectionDate(props){
     //Se optiene la fecha actual para limitar el rango de elección entre los parámetros establecidos
-    const currentDate = new Date();
-    let cDay = currentDate.getDate();
-    let cMonth = currentDate.getMonth() + 1;
-    let cYear = currentDate.getFullYear();
+    const current_date = new Date();
+    let current_day = current_date.getDate();
+    let current_month = current_date.getMonth() + 1;
+    let current_year = current_date.getFullYear();
 
     return (
         <div className="form-floating mb-3">
-            <input type="date" className="form-control" id={props.id} min={`${cYear}-${cMonth<=9 ? '0'+cMonth:cMonth}-${cDay}`}
-                max={`${cYear}-${(cMonth+1)<=9 ? '0'+(cMonth+1):(cMonth+1)}-${cDay}`} name={props.name} onChange={props.handler}/>
+            <input type="date" className="form-control" id={props.id} min={`${current_year}-${current_month<=9 ? '0'+current_month:current_month}-${current_day}`}
+                max={`${current_year}-${(current_month+1)<=9 ? '0'+(current_month+1):(current_month+1)}-${current_day}`} name={props.name} onChange={props.handler}/>
             <label htmlFor={props.id}>{props.text}</label>
         </div>
     )
