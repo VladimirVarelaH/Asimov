@@ -30,7 +30,7 @@ function FormSectionSelect (props){
       )
     } else {
       return (
-        <select className="form-select" aria-label="Default select example" onChange={props.handler}>
+        <select value={props.value} className="form-select form_section" aria-label="Default select example" onChange={props.handler}>
           <option value="10">Seleccione una fecha</option>
           {hours.map(element=>{
             return <option value={element.value} key={element.value}>{element.html}</option>

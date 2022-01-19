@@ -13,6 +13,9 @@ function App() {
 
   return (
     <>
+      <header id="header">
+        Agenda tu hora con la <br/> MUERTE
+      </header>
       <Alert type={alert} handler={setAlert}/>
       <Form handler={setAlert}/>
     </>

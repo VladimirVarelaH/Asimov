@@ -8,6 +8,6 @@ El funcionamiento principal es el de un formulario clásico de React, con valida
 ### El sistema de alertas 
 
 ## Las librerías
-* React: Es el nucleo de nuestra aplicación, con esta librería desarrollamos los componentes del cliente.
-* Axios: Con esta librería se gestionaron las solicitudes a las rutas del servidor.
-* Bootstrap: Con esta librería se aceleró el desarrollo de los estilos del cliente, la librería no se instaló localmente, si no que se solicitó en la ruta que se muestra en el sitio web de Bootstrap.
+* **React**: Es el nucleo de nuestra aplicación, con esta librería desarrollamos los componentes del cliente.
+* **Axios**: Con esta librería se gestionaron las solicitudes a las rutas del servidor.
+* **Bootstrap**: Con esta librería se aceleró el desarrollo de los estilos del cliente, la librería no se instaló localmente, si no que se solicitó en la ruta que se muestra en el sitio web de Bootstrap.
