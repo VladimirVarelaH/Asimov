@@ -42,7 +42,7 @@ Dependiendo de las acciones del usuario, el programa despliega una de sus seis a
 * Caso III: El usuario seleccinó un día de fin de semana.
 * Caso IV: El servidor respondió con un 505, es decir, algo falló con la DB.
 * Caso V: EL servidor respondió con un 200, es decir, el registro no fue posible por la hora seleccionada.
-* Casp VT: El servidor respondió con un 201, es decir, todo en ordem.
+* Casp VI: El servidor respondió con un 201, es decir, todo en ordem.
 
 ## Las librerías
 * **React**: Es el nucleo de nuestra aplicación, con esta librería desarrollamos los componentes del cliente.
