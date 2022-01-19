@@ -6,7 +6,9 @@ import Alert from './alert/index.jsx';
 function App() {
   const [alert, setAlert] = useState(0);
   useEffect(()=>{
-    setTimeout(()=>setAlert(0), 7500)
+    if (alert != 0){
+      setTimeout(()=>setAlert(0), 7500);
+    }
   }, [alert])
 
   return (

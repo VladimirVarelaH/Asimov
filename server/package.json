@@ -12,8 +12,7 @@
   "devDependencies": {
     "body-parser": "^1.19.1",
     "express": "^4.17.2",
-    "mysql": "^2.18.1",
-    "nodemon": "^2.0.15"
+    "mysql": "^2.18.1"
   },
   "dependencies": {
     "cors": "^2.8.5"
