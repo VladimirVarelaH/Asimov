@@ -22,14 +22,20 @@ const connection = mysql.createConnection({
 app.route('/:date?')
 
 .get((req, res)=>{
-    const sql = `SELECT * FROM turns WHERE date=${req.params.date}`;
+    const sql = `SELECT * FROM turns WHERE date='${req.params.date}';`;
+    console.log(sql);
     connection.query(sql, (error, results)=>{
         if (error){
             res.send({"status":505});
         } else {
             let ocupated_hours = [];
             results.forEach(element => {
-                if (element.date == req.params.date){
+                let day = element.date.getDate();
+                let month = element.date.getMonth()+1;
+                let year = element.date.getFullYear();
+                let date = `${year}-${month<=9 ? '0'+month:month}-${day}`;
+
+                if (date == req.params.date){
                     ocupated_hours[ocupated_hours.length] = element.hour;
                 }
             });
@@ -80,6 +86,8 @@ app.route('/:date?')
             }
         })
         
+    } else {
+        res.send({"status":200});
     }
         
 });
