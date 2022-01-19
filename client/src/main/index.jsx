@@ -25,6 +25,7 @@ function Form(props){
         if (data['date']){
                 axios.get('http://localhost:5000/'+date
             ).then(res=>{
+                console.log(res.data)
                 if (res.data.status == 200){
                     setOcupatedHours(res.data.hours)
                 }
@@ -101,7 +102,7 @@ function Form(props){
             <FormSectionDate value={data.date} id="date" placeholder="DD-MM-YY" 
             name="date" text="Fecha Deseada" handler={handleDate}/>
 
-            <FormSectionSelect value={data.hour} handler={handleSelect} ocupated={ocupated_hours}/>
+            <FormSectionSelect handler={handleSelect} ocupated={ocupated_hours}/>
 
             <Button handler={sendHandler} text="Agendar mi cita"/>
         </main>
